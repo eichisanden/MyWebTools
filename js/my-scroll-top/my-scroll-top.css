@@ -1,0 +1,14 @@
+.scroll-top-div {
+  bottom: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 30px;
+  opacity: .5;
+  padding-top: 8px;
+  position: fixed;
+  right: 15px;
+  text-align: center;
+  width: 40px;
+}
