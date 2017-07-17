@@ -1,0 +1,23 @@
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analyze User Agent</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<input type="text" id="ua" class="form-control" placeholder="Input Useragent" onChange="analyze()">
+<div id="result" style="margin-top: 20px; font-size: 24px;"></div>
+<script src="js/lib/woothee/woothee.js"></script>
+<script>
+  function analyze() {
+    var val = document.getElementById('ua').value;
+    var result = woothee.parse(val);
+    console.log(result);
+    document.getElementById('result').innerHTML = JSON.stringify(result);
+  }
+// => {name: 'Internet Explorer', category: 'pc', os: 'Windows 7', version: '8.0', vendor: 'Microsoft', os_version: 'NT 6.1'}
+</script>
+</body>
+</html>
